@@ -38,7 +38,7 @@ export default defineConfig({
       name: 'setup',
       testMatch: /AuthSetup\.ts/,
     },
-    {
+    /*{
       name: 'chromium',
     dependencies: ['setup'],
     use: {
@@ -46,14 +46,17 @@ export default defineConfig({
       storageState: 'playwright/.auth/user.json',
       headless: false,
     }
-  },
-
-    /*{
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+  },*/
 
     {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'], 
+      headless: false,
+      },
+      
+    },
+
+   /* {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },

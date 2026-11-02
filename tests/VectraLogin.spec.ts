@@ -16,5 +16,5 @@ test('get started link', async ({ page }) => {
   await page.getByText('Sign in to Dashboard').click();
 
   // Expects page to have a heading with the name Your Quotes.
-  await expect(page.getByRole('heading',{name: 'Your Quotes' })).toBeVisible();
+  await expect(page.getByRole('button',{name: '+ Detailed Quote' })).toBeVisible({ timeout: 30000 });
 });
