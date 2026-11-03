@@ -50,9 +50,11 @@ export default defineConfig({
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'], 
-      headless: false,
-      },
+      dependencies: ['setup'],
+      use: {
+      ...devices['Desktop Firefox'],
+      storageState: 'playwright/.auth/user.json',
+      headless: false,},
       
     },
 
